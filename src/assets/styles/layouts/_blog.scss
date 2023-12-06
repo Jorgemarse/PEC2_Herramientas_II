@@ -1,0 +1,35 @@
+@layer structure {
+  .container__blog{
+      width: 100%;
+    max-width: $mqmaxwidth;
+    margin: 5 auto;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 10px;
+    background-color: $bgcard;
+
+    @media ( max-width: $mqminwidth ) {
+      padding: 0;
+    }
+  }
+}
+@layer item{
+  .container__blog__post{
+      align-items: center;
+      text-align: center;
+
+      &:has(blockquote) {
+          display: inline-flex;        
+        }
+  }
+  blockquote{
+      font-size: 20px;
+      font-weight: 300;
+      width: 40%;
+      
+  }
+  :where(ol){
+      font-weight: 600;
+      list-style: none;
+    }
+}
